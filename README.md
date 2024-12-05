@@ -23,6 +23,7 @@ Once an order is complete, we mark the status on the order to notify the custome
 ## Constraints
 
 * Files in `bestql` and `engines` cannot be modified
+* `order.py` should not be modified
 * Orders which are completed should be marked as such and those not completable should be rejected
 
 ## Running
