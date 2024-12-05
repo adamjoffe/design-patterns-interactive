@@ -25,6 +25,11 @@ Once an order is complete, we mark the status on the order to notify the custome
 * Files in `bestql` and `engines` cannot be modified
 * Orders which are completed should be marked as such and those not completable should be rejected
 
+## Running
+```sh
+python3 main.py
+```
+
 ## Extras
 
 * We are expanding, so we want to open additional manufacturing plants, but we will still use the same warehouse company for all orders
