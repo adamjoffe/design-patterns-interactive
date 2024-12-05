@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 
 
-class EngineTestService(ABC):
+class EngineService(ABC):
 
     @abstractmethod
-    def prepare_and_test_engine(self):
+    def procure_and_test_engine(self):
         ...
