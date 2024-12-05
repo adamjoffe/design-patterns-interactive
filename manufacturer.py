@@ -1,9 +1,12 @@
 from order import Order
+from storage import Storage
 
 
 class Manufacturer:
+    storage: Storage
+
     def __init__(self):
-        pass
+        self.storage = Storage()
 
     def manufacture(self, order: Order) -> None:
         pass
