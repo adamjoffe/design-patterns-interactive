@@ -16,3 +16,5 @@ if __name__ == "__main__":
 
     assert get_completed() == 4
     assert get_rejected() == 2
+
+    print("All cars manufactured successfully")
