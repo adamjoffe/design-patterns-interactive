@@ -1,4 +1,6 @@
 class V8:
+    MAX_FUEL = 60
+
     def __init__(self):
         self.fuel = 0
 
@@ -6,7 +8,7 @@ class V8:
         self.fuel += fuel
 
     def turn_on(self):
-        if self.fuel > 0:
+        if self.fuel == V8.MAX_FUEL:
             print(f"{self} engine is on")
         else:
-            raise Exception("No fuel")
+            raise Exception("Insufficient fuel")
