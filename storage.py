@@ -1,4 +1,5 @@
 from bestql.contract import Contract
+from bestql.warehouse import Warehouse
 
 class Storage():
     contract: Contract
@@ -10,5 +11,5 @@ class Storage():
         return cls.instance
 
 
-    def get_warehouse(self):
+    def get_warehouse(self) -> Warehouse:
         self.contract.get_warehouse() 
