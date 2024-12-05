@@ -22,5 +22,6 @@ class Manufacturer:
         if not result:
             print("Invalid engine type for chassis")
             order.reject()
-        self.storage.get_warehouse().store_car(get_next_vin(), chassis)
-        order.complete()
+        else:
+            self.storage.get_warehouse().store_car(get_next_vin(), chassis)
+            order.complete()
