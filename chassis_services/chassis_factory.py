@@ -5,6 +5,7 @@ from order import Chassis
 
 
 class ChassisFactory:
+    # Factory pattern to create chassis based on type
 
     def create_chassis(self, chassis_type: Chassis):
         if (chassis_type == Chassis.SPORT):

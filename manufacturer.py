@@ -16,6 +16,7 @@ class Manufacturer:
         self.chassis_factory = ChassisFactory()
 
     def manufacture(self, order: Order) -> None:
+        # Facade pattern to simplify the process of manufacturing a car based on an order input
         engine_service = self.engine_factory.create_engine_service(order.engine)
         chassis = self.chassis_factory.create_chassis(order.chassis)
         result = chassis.install_engine(engine_service)
