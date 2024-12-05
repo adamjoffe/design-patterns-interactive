@@ -7,6 +7,3 @@ class Manufacturer:
 
     def manufacture(self, order: Order) -> None:
         pass
-
-    def ship_orders() -> None:
-        pass
