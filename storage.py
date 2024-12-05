@@ -12,4 +12,4 @@ class Storage():
 
 
     def get_warehouse(self) -> Warehouse:
-        self.contract.get_warehouse() 
+        return self.contract.get_warehouse() 
