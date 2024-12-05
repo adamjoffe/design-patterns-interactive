@@ -6,6 +6,7 @@ from order import Engine
 
 
 class EngineFactory:
+    # Factory pattern to create respective engine service based on engine type
 
     def create_engine_service(self, engine: Engine):
         if (engine == Engine.V6):
