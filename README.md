@@ -23,6 +23,7 @@ Once an order is complete, we mark the status on the order to notify the custome
 ## Constraints
 
 * Files in `bestql` and `engines` cannot be modified
+* A `Warehouse` should always be accessed via a `Contract`, otherwise access would be illegal!
 * `order.py` should not be modified
 * Orders which are completed should be marked as such and those not completable should be rejected
 * `vin_service.py` should be used to get a VIN for each car
