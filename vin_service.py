@@ -1,4 +1,4 @@
-global_vin_counter = 0
+global_vin_counter = 1
 
 def get_next_vin():
     global global_vin_counter
