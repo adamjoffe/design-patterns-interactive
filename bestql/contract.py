@@ -2,12 +2,12 @@ import time
 from typing import Any
 from bestql.warehouse import Warehouse
 
-__storage: dict[str, Any] = {}
 
 class Contract:
+    __storage: dict[str, Any] = {}
+
     def __init__(self):
         self.__establish_contract()
-        self.__storage = __storage
 
     def __establish_contract(self) -> None:
         ''' Complete a long boring legal contract to work with the company '''
@@ -17,3 +17,7 @@ class Contract:
     def get_warehouse(self) -> Warehouse:
         ''' Get access to a warehouse to store and retrieve cars '''
         return Warehouse(self.__storage)
+
+    @classmethod
+    def get_storage(cls) -> dict[str, Any]:
+        return cls.__storage
