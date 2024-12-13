@@ -5,5 +5,9 @@ class EngineService(ABC):
     # Adaptor pattern to abstract underlying differences in engine type process under a unified API
 
     @abstractmethod
+    def engine_type(self) -> type:
+        ...
+
+    @abstractmethod
     def procure_and_test_engine(self):
         ...

@@ -4,6 +4,9 @@ from engines.v6 import V6
 
 class V6Service(EngineService):
 
+    def engine_type(self) -> type:
+        return V6
+
     def procure_and_test_engine(self) -> V6:
         engine = V6()
         engine.add_fuel(V6.MAX_FUEL)

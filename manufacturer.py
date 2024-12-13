@@ -19,10 +19,10 @@ class Manufacturer:
         # Facade pattern to simplify the process of manufacturing a car based on an order input
         engine_service = self.engine_factory.create_engine_service(order.engine)
         chassis = self.chassis_factory.create_chassis(order.chassis)
-        result = chassis.install_engine(engine_service)
-        if not result:
-            print("Invalid engine type for chassis")
+        if not chassis.accepts_engine(engine_service.engine_type()):
+            print("Chassis does not accept engine type")
             order.reject()
-        else:
-            self.storage.get_warehouse().store_car(get_next_vin(), chassis)
-            order.complete()
+            return
+        chassis.install_engine(engine_service)
+        self.storage.get_warehouse().store_car(get_next_vin(), chassis)
+        order.complete()

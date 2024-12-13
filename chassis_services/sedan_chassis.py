@@ -8,10 +8,11 @@ from engines.v6 import V6
 class SedanChassis(AbstractChassis):
     engine: V6 | Electric
 
-    def install_engine(self, engine_service: V6Service | ElectricService) -> bool:
+    def accepts_engine(self, engine_type: type) -> bool:
+        return engine_type in (V6, Electric)
+
+    def install_engine(self, engine_service: V6Service | ElectricService) -> None:
         engine = engine_service.procure_and_test_engine()
         if not isinstance(engine, (V6, Electric)):
-            print("Engine must be of type V6 or Electric")
-            return False
+            raise Exception("Engine must be of type V6 or Electric")
         self.engine = engine
-        return True
